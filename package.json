@@ -1,0 +1,33 @@
+{
+  "name": "tallbag-flatten",
+  "version": "1.0.0",
+  "description": "Tallbag operator that flattens a higher-order tallbag source",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/staltz/tallbag-flatten.git"
+  },
+  "main": "index.cjs.js",
+  "module": "index.js",
+  "types": "types.d.ts",
+  "scripts": {
+    "build": "rollup $npm_package_module -o $npm_package_main --f cjs",
+    "pretest": "npm run build",
+    "test": "tape test.js",
+    "prepare": "npm test"
+  },
+  "author": "staltz.com",
+  "license": "MIT",
+  "keywords": [
+    "callbag",
+    "tallbag"
+  ],
+  "devDependencies": {
+    "tallbag-map": "1.0.0",
+    "rollup": "^0.63.4",
+    "tape": "^4.8.0"
+  },
+  "dependencies": {
+    "tallbag": "~1.2.0",
+    "shadow-callbag": "~1.0.0"
+  }
+}
